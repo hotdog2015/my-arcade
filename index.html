@@ -3,13 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Arcade</title>
+  <meta name="description" content="Move your bowl to catch 10 oranges while avoiding bouncing balls.">
+  <title>Orange Catcher · My Arcade</title>
   <style>
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: Arial, sans-serif; background: #111827; color: #ffffff; }
-    h1 { font-size: clamp(3rem, 8vw, 7rem); text-align: center; padding: 1rem; }
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: system-ui, sans-serif;
+      background: #080e22;
+      color: #f3f5ff;
+    }
+
+    main {
+      width: min(100%, 640px);
+      padding: clamp(32px, 7vw, 64px) 24px;
+      text-align: center;
+      background: #101a36;
+      border: 1px solid #35405f;
+      border-radius: 24px;
+      box-shadow: 0 24px 80px #0005;
+    }
+
+    .eyebrow {
+      color: #a6a5ff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    .orange {
+      margin: 24px 0 16px;
+      font-size: 64px;
+      line-height: 1;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 9vw, 72px);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+    }
+
+    p {
+      max-width: 34ch;
+      margin: 20px auto 32px;
+      color: #c1cce3;
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .play {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      width: min(100%, 280px);
+      min-height: 72px;
+      padding: 18px 32px;
+      border-radius: 14px;
+      background: #ffe19a;
+      color: #18203c;
+      font-size: 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .play:hover { background: #ffedc2; }
+    .play:focus-visible {
+      outline: 3px solid #a6a5ff;
+      outline-offset: 5px;
+    }
   </style>
 </head>
 <body>
-  <h1>Hello from my arcade</h1>
+  <main>
+    <span class="eyebrow">MY ARCADE / 01</span>
+    <div class="orange" aria-hidden="true">&#127818;</div>
+    <h1>Orange Catcher</h1>
+    <p>Move your bowl to catch 10 oranges while avoiding bouncing balls.</p>
+    <a class="play" href="game.html">Play <span aria-hidden="true">&#8594;</span></a>
+  </main>
 </body>
 </html>
